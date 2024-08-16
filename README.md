@@ -1,4 +1,4 @@
-[# EstacionamentoTesteLogica
+## EstacionamentoTesteLogica
 
 Este projeto é uma aplicação de controle de estacionamento desenvolvida em C#. O sistema permite registrar a entrada e saída dos veículos, calcular o tempo e o valor cobrado com base em uma tabela de preços configurável, e possui uma interface desktop para facilitar o uso.
 
@@ -35,10 +35,13 @@ Este projeto é uma aplicação de controle de estacionamento desenvolvida em C#
    git clone https://github.com/CleitonSilvaPaes/EstacionamentoTesteLogica.git
    cd EstacionamentoTesteLogica
 ](https://github.com/CleitonSilvaPaes/EstacionamentoTesteLogica)
+
 2. Abra a solução no Visual Studio.
+   
 3. Compile o projeto:
     ```bash
     dotnet build
-4. Execute o projeto:
+
+5. Execute o projeto:
     ```bash
     dotnet run
