@@ -1,0 +1,5 @@
+﻿<RunSettings>
+  <RunConfiguration>
+    <TestAdaptersPaths>$(SolutionDir)\packages</TestAdaptersPaths>
+  </RunConfiguration>
+</RunSettings>
