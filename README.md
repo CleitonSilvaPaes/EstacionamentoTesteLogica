@@ -34,7 +34,6 @@ Este projeto é uma aplicação de controle de estacionamento desenvolvida em C#
    ```bash
    git clone https://github.com/CleitonSilvaPaes/EstacionamentoTesteLogica.git
    cd EstacionamentoTesteLogica
-](https://github.com/CleitonSilvaPaes/EstacionamentoTesteLogica)
 
 2. Abra a solução no Visual Studio.
    
