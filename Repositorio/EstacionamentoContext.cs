@@ -22,6 +22,9 @@ namespace Estacionamento.Repositorio
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            // Refencia
+            // https://learn.microsoft.com/pt-br/ef/core/modeling/keys?tabs=fluent-api
+
             modelBuilder.Entity<TabelaPreco>()
                 .HasKey(t => t.Id); // Definindo a chave primária
 

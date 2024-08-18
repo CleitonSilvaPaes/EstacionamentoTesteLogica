@@ -55,7 +55,6 @@ namespace Estacionamento.View
                 // Ajusta o modo de redimensionamento automático das colunas
                 dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
-                // Certifique-se de que o DataGridView preenche o contêiner pai
                 dataGridView1.Dock = DockStyle.Fill;
             }
         }

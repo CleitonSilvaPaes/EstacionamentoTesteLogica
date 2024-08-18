@@ -58,11 +58,12 @@ namespace Estacionamento.Service
 
         public bool RegistrarEntrada(string placa)
         {
+            placa = placa.ToUpper();
             using (var context = _ContextFactory.Create())
             {
                 // Verifica se o veículo já está no estacionamento sem saída confirmada
                 var movimentacaoExistente = context.Movimentacoes
-                    .FirstOrDefault(m => m.Veiculo.Placa == placa && m.Saida == null);
+                    .FirstOrDefault(m => m.Veiculo.Placa.ToUpper() == placa && m.Saida == null);
 
                 if (movimentacaoExistente != null)
                 {
@@ -73,7 +74,7 @@ namespace Estacionamento.Service
                 }
 
                 // Se não existe movimentação sem saída confirmada, registra a nova entrada
-                var veiculo = context.Veiculos.SingleOrDefault(v => v.Placa == placa);
+                var veiculo = context.Veiculos.SingleOrDefault(v => v.Placa.ToUpper() == placa);
                 if (veiculo == null)
                 {
                     veiculo = new Veiculo { Placa = placa };

@@ -60,7 +60,7 @@ namespace Estacionamento.View
 
         private void maskedTextBoxPesquisa_TextChanged(object sender, EventArgs e)
         {
-            string pesquisa = maskedTextBoxPesquisa.Text.ToLower().Replace("-", "").Trim();
+            string pesquisa = maskedTextBoxPesquisa.Text.ToUpper().Replace("-", "").Trim();
 
             if (string.IsNullOrEmpty(pesquisa))
             {
@@ -69,7 +69,7 @@ namespace Estacionamento.View
             else
             {
                 var data = dadosOriginais
-                    .Where(m => m.Placa.Replace("-", "").ToLower().Contains(pesquisa) || m.Id.ToString().Contains(pesquisa))
+                    .Where(m => m.Placa.ToUpper().Replace("-", "").ToLower().Contains(pesquisa) || m.Id.ToString().Contains(pesquisa))
                     .ToList();
                 dataGridViewMovimentacoes.DataSource = data;
             }
@@ -110,12 +110,12 @@ namespace Estacionamento.View
             if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
             {
                 // Obter o valor da célula 2 (placa)
-                string placa = dataGridViewMovimentacoes.Rows[e.RowIndex].Cells[1].Value.ToString();
+                string placa = dataGridViewMovimentacoes.Rows[e.RowIndex].Cells[1].Value.ToString().ToUpper();
                 maskedTextBoxPesquisa.Text = placa;
 
                 // Efetuar a saída
                 var data = dadosOriginais
-                    .FirstOrDefault(m => m.Placa.Replace("-", "").ToLower().Contains(placa) || m.Id.ToString().Contains(placa));
+                    .FirstOrDefault(m => m.Placa.Replace("-", "").ToUpper().Contains(placa) || m.Id.ToString().Contains(placa));
 
                 if (data != null)
                 {
