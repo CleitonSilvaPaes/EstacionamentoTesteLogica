@@ -7,6 +7,8 @@ namespace Estacionamento.Tests.Extensions
 {
     public static class MockDbSetExtensions
     {
+        // Referencia
+        // https://www.loganfranken.com/blog/mocking-dbset-queries-in-ef6
         public static Mock<DbSet<T>> CreateMockDbSet<T>(this IEnumerable<T> sourceList) where T : class
         {
             // Converte a lista de origem em uma consulta (queryable)
