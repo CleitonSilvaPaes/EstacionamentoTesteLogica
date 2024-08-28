@@ -23,7 +23,13 @@ namespace Estacionamento.View
 
             bool sucesso = _service.RegistrarEntrada(placa);
             if (sucesso)
+            {
+                MessageBox.Show("Entrada registrada com sucesso.", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Dispose();
+            }
+            else
+                MessageBox.Show("O veículo já está no estacionamento.\r\n" +
+                                   "Primeiro registre a saída do veículo.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
     }
 }

@@ -68,8 +68,6 @@ namespace Estacionamento.Service
                 if (movimentacaoExistente != null)
                 {
                     // Se já existe uma movimentação sem saída confirmada, não permite nova entrada
-                    MessageBox.Show("O veículo já está no estacionamento.\r\n" +
-                                    "Primeiro registre a saída do veículo.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return false;
                 }
 
@@ -93,8 +91,6 @@ namespace Estacionamento.Service
 
                 context.Movimentacoes.Add(movimentacao);
                 context.SaveChanges();
-
-                MessageBox.Show("Entrada registrada com sucesso.", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return true;
             }
         }
